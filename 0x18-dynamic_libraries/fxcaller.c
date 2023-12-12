@@ -1,11 +1,61 @@
-import random
-import ctypes
+#include <stdio.h>
+#include <math.h>
 
-mylib = ctypes.CDLL('./100-operations.so')
-a = random.randint(-111, 111)
-b = random.randint(-111, 111)
-print("{} + {} = {}".format(a, b, mylib.strlen(a, b)))
-print("{} - {} = {}".format(a, b, mylib.strchr(a, b)))
-print("{} x {} = {}".format(a, b, mylib.strspn(a, b)))
-print("{} / {} = {}".format(a, b, mylib.strncat(a, b)))
-print("{} % {} = {}".format(a, b, mylib._strcmp(a, b)))
+/*
+ * Function to add two integers
+ */
+
+int add(int a, int b)
+{
+	return (a + b);
+}
+
+/*
+ * Function to subtract two integers
+ */
+
+int subtract(int a, int b)
+{
+	return (a - b);
+}
+
+/*
+ * Function to multiply two integers
+ */
+
+int multiply(int a, int b)
+{
+	return (a * b);
+}
+
+/*
+ * Function to divide two integers
+ */
+int divide(int a, int b)
+{
+	if (b != 0)
+	{
+		return (a / b);
+	}
+	else
+	{
+		printf("Error: Division by zero\n");
+		return (0);
+	}
+}
+
+/*
+ * Function to obtain remainder of two integers
+ */
+int calculate_remainder(int a, int b)
+{
+	if (b != 0)
+	{
+		return (a % b);
+	}
+	else
+	{
+		printf("Error: Division by zero\n");
+		return (0);
+	}
+}
