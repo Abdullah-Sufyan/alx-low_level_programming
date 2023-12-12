@@ -33,15 +33,7 @@ int multiply(int a, int b)
  */
 int divide(int a, int b)
 {
-	if (b != 0)
-	{
-		return (a / b);
-	}
-	else
-	{
-		printf("Error: Division by zero\n");
-		return (0);
-	}
+	return (a / b);
 }
 
 /*
@@ -49,13 +41,5 @@ int divide(int a, int b)
  */
 int calculate_remainder(int a, int b)
 {
-	if (b != 0)
-	{
-		return (a % b);
-	}
-	else
-	{
-		printf("Error: Division by zero\n");
-		return (0);
-	}
+	return (a % b);
 }
